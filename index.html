@@ -12,70 +12,72 @@
         color: #4ade80;
         font-family: Arial, sans-serif;
         margin: 0;
-        padding: 20px;
+        padding: 15px 25px;
         text-align: center;
         box-sizing: border-box;
     }
 
     h1 {
         color: #4ade80;
-        margin-bottom: 12px;
-        font-size: 36px;
+        margin-bottom: 8px;
+        font-size: 32px;
     }
 
     .device-info-box {
         background: #21262d;
-        border: 3px solid #30363d;
-        border-radius: 12px;
-        padding: 16px 22px;
-        margin: 20px auto;
-        max-width: 1100px;
+        border: 2px solid #30363d;
+        border-radius: 10px;
+        padding: 10px 18px;
+        margin: 12px auto;
+        width: 95%;
+        max-width: 1200px;
         word-break: break-all;
-        font-size: 18px;
+        font-size: 15px;
         color: #4ade80;
-        font-weight: bold;
+        box-sizing: border-box;
     }
 
     /* نڤیسینا تایبەت ل سەر جیلبریکا PS4 */
     .credits-box {
         background: #21262d;
-        border: 3px solid #30363d;
-        border-radius: 12px;
-        padding: 20px 25px;
-        margin: 25px auto;
-        max-width: 1100px;
-        font-size: 20px;
+        border: 2px solid #30363d;
+        border-radius: 10px;
+        padding: 15px 20px;
+        margin: 20px auto;
+        width: 95%;
+        max-width: 1200px;
+        font-size: 16px;
         color: #22c55e;
-        line-height: 1.7;
+        line-height: 1.6;
         box-sizing: border-box;
     }
 
     hr {
         border: 0;
-        border-top: 3px solid #30363d;
-        margin: 25px auto;
+        border-top: 2px solid #30363d;
+        margin: 15px auto;
         width: 95%;
-        max-width: 1150px;
+        max-width: 1200px;
     }
 
     .btn-container {
-        margin: 25px 0;
+        margin: 15px 0;
     }
 
     #kernel-options {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 35px;
+        gap: 25px;
         color: #4ade80;
-        font-size: 22px;
+        font-size: 18px;
         font-weight: bold;
     }
 
     #kernel-options input[type="radio"] {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
     }
 
@@ -86,14 +88,14 @@
     button#jeilbrek {
         background: #21262d;
         color: #4ade80;
-        border: 3px solid #30363d;
-        border-radius: 12px;
-        padding: 18px 45px;
-        font-size: 22px;
+        border: 2px solid #30363d;
+        border-radius: 10px;
+        padding: 12px 35px;
+        font-size: 18px;
         font-weight: bold;
         cursor: pointer;
         width: 100%;
-        max-width: 500px;
+        max-width: 380px;
         transition: 0.2s;
     }
 
@@ -103,81 +105,91 @@
     }
 
     .autoJb {
-        margin-top: 15px;
-        font-size: 20px;
+        margin-top: 10px;
+        font-size: 16px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 12px;
+        gap: 8px;
         color: #4ade80;
         font-weight: bold;
     }
 
     .autoJb input[type="checkbox"] {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
     }
 
+    /* لەیئاوتێ سەرەکی (تەنشت ب تەنشت وەکی وێنێ تەلەڤزیۆنێ) */
     .main-layout {
-        width: 100%;
-        max-width: 1100px;
-        margin: 0 auto;
+        width: 95%;
+        max-width: 1200px;
+        margin: 20px auto;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 25px;
+        flex-direction: row; /* دەستکاریکرن بۆ ڕێزبۆنا تەنشت ب تەنشت */
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+        box-sizing: border-box;
+    }
+
+    .media-box {
+        flex: 0 0 280px; /* قیاسێ وێنەیی */
+        display: flex;
     }
 
     .media-box img {
-        width: 280px;
+        width: 100%;
         height: 280px;
         object-fit: cover;
-        border-radius: 14px;
-        border: 3px solid #30363d;
+        border-radius: 10px;
+        border: 2px solid #30363d;
     }
 
     #console {
-        width: 100%;
-        max-width: 1100px;
+        flex: 1; /* پڕکرنا بەشێ مای ب تەمامی */
         background: #0d1117;
         color: #4ade80;
         font-family: monospace;
-        font-size: 18px;
-        padding: 22px;
+        font-size: 16px;
+        padding: 18px;
         text-align: left;
-        height: 300px;
+        height: 280px;
         overflow-y: scroll;
         word-wrap: break-word;
-        border: 3px solid #30363d;
-        border-radius: 12px;
+        border: 2px solid #30363d;
+        border-radius: 10px;
         box-sizing: border-box;
+        margin: 0;
     }
 
     /* نامەیا سوپاسگوزاریێ */
     #thankyou-message {
         display: none;
         background: #21262d;
-        border: 3px solid #4ade80;
-        border-radius: 14px;
-        padding: 28px;
-        margin: 25px auto;
-        max-width: 1100px;
+        border: 2px solid #4ade80;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px auto;
+        width: 95%;
+        max-width: 1200px;
         text-align: center;
         animation: fadeIn 0.5s ease-in-out;
+        box-sizing: border-box;
     }
 
     #thankyou-message h2 {
         color: #4ade80;
         margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 28px;
+        margin-bottom: 10px;
+        font-size: 24px;
     }
 
     #thankyou-message p {
         color: #e2e8f0;
-        font-size: 22px;
-        line-height: 1.7;
+        font-size: 18px;
+        line-height: 1.6;
         margin: 0;
     }
 
@@ -189,46 +201,46 @@
     .social-container {
         display: flex;
         justify-content: center;
-        gap: 25px;
-        margin: 35px 0;
+        gap: 20px;
+        margin: 25px 0;
     }
 
     .social-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 75px;
-        height: 75px;
+        width: 65px;
+        height: 65px;
         background: #21262d;
         color: #4ade80;
-        border: 3px solid #30363d;
+        border: 2px solid #30363d;
         text-decoration: none;
-        border-radius: 14px;
+        border-radius: 12px;
         transition: 0.2s;
     }
 
     .social-btn svg {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 
     .social-btn:hover {
-        transform: scale(1.1);
+        transform: scale(1.08);
         border-color: #4ade80;
     }
 
     /* دوگمەیا گوهۆڕینا Dark Mode / Light Mode */
     .theme-toggle-container {
-        margin: 20px 0;
+        margin: 12px 0;
     }
 
     .theme-btn {
         background: #21262d;
         color: #4ade80;
-        border: 3px solid #30363d;
-        border-radius: 10px;
-        padding: 12px 25px;
-        font-size: 18px;
+        border: 2px solid #30363d;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 15px;
         cursor: pointer;
         font-weight: bold;
         transition: 0.2s;
@@ -272,81 +284,21 @@
         color: #1f2937;
     }
 
-    /* ---------------------------------------------------- */
-    /* ڕێکخستنا تایبەت بۆ شاشێن گەلەک مەزن (TV / PS4 Browser XL) */
-    /* ---------------------------------------------------- */
-    @media screen and (min-width: 768px) {
-        body {
-            padding: 40px;
+    /* ئەگەر شاشە گەلەک بچووک بوو (مۆبايل)، ل سەر ئێک بهێنە خوارێ */
+    @media screen and (max-width: 768px) {
+        .main-layout {
+            flex-direction: column;
+            align-items: center;
         }
-
-        h1 {
-            font-size: 50px;
+        .media-box {
+            flex: none;
+            width: 220px;
         }
-
-        .device-info-box {
-            font-size: 24px;
-            padding: 22px 30px;
+        .media-box img {
+            height: 220px;
         }
-
-        .theme-btn {
-            font-size: 24px;
-            padding: 16px 32px;
-        }
-
-        #kernel-options {
-            font-size: 28px;
-            gap: 50px;
-        }
-
-        #kernel-options input[type="radio"] {
-            width: 28px;
-            height: 28px;
-        }
-
-        button#jeilbrek {
-            font-size: 28px;
-            padding: 22px 60px;
-            max-width: 600px;
-        }
-
-        .autoJb {
-            font-size: 24px;
-        }
-
-        .autoJb input[type="checkbox"] {
-            width: 28px;
-            height: 28px;
-        }
-
         #console {
-            font-size: 22px;
-            height: 380px;
-            padding: 25px;
-        }
-
-        #thankyou-message h2 {
-            font-size: 36px;
-        }
-
-        #thankyou-message p {
-            font-size: 26px;
-        }
-
-        .credits-box {
-            font-size: 26px;
-            padding: 28px;
-        }
-
-        .social-btn {
-            width: 90px;
-            height: 90px;
-            border-radius: 18px;
-        }
-
-        .social-btn svg {
-            width: 55px;
-            height: 55px;
+            width: 100%;
         }
     }
   </style>
@@ -378,17 +330,18 @@
   </div>
 
   <div class="main-layout">
-    <!-- لۆکۆیا مورەبەع -->
+    <!-- لۆکۆ / وێنە ل لایێ چپێ -->
     <div class="media-box">
     </div>
 
+    <!-- سندوقا کۆنسۆلێ ل لایێ ڕاستێ -->
     <pre id="console">ئامادەیە. ل چاڤەڕێیا بجهئینانێ یە...</pre>
-    
-    <!-- نامەیا سوپاسگوزاریێ -->
-    <div id="thankyou-message">
-      <h2>✨ دەستخۆشی و سوپاس بۆ تە! ✨</h2>
-      <p>سوپاس بۆ وى کەسێ هێژا یێ کو ڤى پەڕەی بەکاردئینیت و سەردانا مە کرى. هیڤیدارم کارێ تە ب سەرکەفتن ب دوماهى هاتبت و هەر هەی ب سەلامەت بی! 🙏❤️</p>
-    </div>
+  </div>
+
+  <!-- نامەیا سوپاسگوزاریێ -->
+  <div id="thankyou-message">
+    <h2>✨ دەستخۆشی و سوپاس بۆ تە! ✨</h2>
+    <p>سوپاس بۆ وى کەسێ هێژا یێ کو ڤى پەڕەی بەکاردئینیت و سەردانا مە کرى. هیڤیدارم کارێ تە ب سەرکەفتن ب دوماهى هاتبت و هەر هەی ب سەلامەت بی! 🙏❤️</p>
   </div>
 
   <!-- نڤیسینا تایبەت ل بارەی دروستکرنا سیستەمی -->
