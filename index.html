@@ -315,13 +315,14 @@
   <script src="src/main.js"></script>
   <script src="includes/script.js"></script>
   <script>
-    window.addEventListener('DOMContentLoaded', () => {
+    // پشتی ته‌واو بارکرنا هه‌می دیزاین، فۆنت، و فایلا (Fully Loaded)
+    window.addEventListener('load', () => {
         const uaElement = document.getElementById('UA');
         if (uaElement) {
             uaElement.innerText = "ئامێر: " + navigator.userAgent;
         }
 
-        // پاش 5 چرکان (5000 ملیکرک) کار خلاس بیت، نامەیا سوپاسگوزاریێ دێ دەركەفیت
+        // دانانا تایمه‌ره‌كێ 5 چركه‌یی پشتی لۆدبوونا ته‌واو یێن فایلا
         setTimeout(() => {
             const consoleBox = document.getElementById('console');
             const thankyouBox = document.getElementById('thankyou-message');
@@ -330,7 +331,7 @@
                 consoleBox.innerHTML += "\n[+] کار خلاس بوو. سوپاس بۆ تشتکرنێ!";
             }
             
-            // نیشادانا نامەیا سوپاسگوزاریێ ل جهێ کۆنصۆلی یان بێخە سەرێ
+            // نیشادانا نامەیا سوپاسگوزاریێ ب روونی
             if(thankyouBox) {
                 thankyouBox.style.display = "block";
                 thankyouBox.scrollIntoView({ behavior: 'smooth' });
@@ -343,7 +344,7 @@
                 console.log("Window close restricted.");
             }
             
-        }, 5000);
+        }, 5000); // 5000 ده‌مژمێرا ملیکرک = 5 چركه‌
     });
 
     // کلیل بۆ گوهۆڕینا دیمەنی نێوان تاریک و ڕۆناهی
