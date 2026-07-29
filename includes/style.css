@@ -1,104 +1,172 @@
+/* ڕێکخستنا گشتی بۆ ویندۆز و پلەیستەیشن */
 body {
-    background: #111111;
-    color: #dddddd;
+    background: linear-gradient(135deg, #1c1815 0%, #2c241f 100%);
+    background-attachment: fixed;
+    color: #4ade80;
+    font-family: Arial, sans-serif; /* فۆنتەکا سادە و جێگیر کو ل سەر هەمی براوسەران کار دکەت */
     margin: 0;
-    padding: 20px;
+    padding: 15px;
     text-align: center;
+    box-sizing: border-box;
 }
 
-h1 {
-    color: #ffffff;
-    font-size: 28px;
-    margin: 10px 0 5px 0;
+/* لۆکۆیا سەرێ پەیجێ */
+.header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    color: #4ade80;
 }
 
 h3 {
-    color: #aaaaaa;
+    color: #22c55e;
     font-size: 14px;
     font-weight: normal;
     margin: 0 0 15px 0;
+    word-break: break-all;
 }
 
 hr {
     border: 0;
-    border-top: 1px solid #333333;
+    border-top: 2px solid #3d312a;
     margin: 15px auto;
-    width: 90%;
+    width: 85%;
 }
 
 .btn-container {
-    margin: 20px 0 30px 0;
+    margin: 20px 0;
 }
 
+/* دوگمەیا سەرەکی */
 button {
-    background: #2563eb;
-    color: #ffffff;
-    border: none;
-    padding: 12px 35px;
-    font-size: 18px;
+    background: #1e293b;
+    color: #4ade80;
+    border: 2px solid #3d312a;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-}
-
-button:disabled, button:hover:disabled {
-    background: #0b2253;
-    cursor: default;
+    width: 100%;
+    max-width: 320px;
 }
 
 button:hover {
-    background: #1d4ed8;
+    background: #2c241f;
+    border-color: #4ade80;
 }
 
+/* ڕێکخستنا سندوقا سەرەکی داکو ل هەمۆ شاشەیان بێ کێمشوک بێت */
 .main-layout {
-    width: 96%;
+    width: 100%;
+    max-width: 700px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
 .media-box {
-    float: left;
-    width: 25%;
-    text-align: center;
+    display: none;
 }
 
-.media-box img {
-    width: 90%;
-    height: auto;
-    border: 1px solid #222222;
-}
-
+/* کونسۆل (سندوقا رەش) ب شێوازەکێ کو ل سەر پلەیستەیشنی ژი نەڕژێت */
 #console {
-    float: right;
-    width: 70%;
-    background: #000000;
-    color: #00ff00;
-    font-size: 14px;
+    width: 100%;
+    max-width: 650px;
+    background: #14110f;
+    color: #4ade80;
+    font-family: monospace;
+    font-size: 13px;
     padding: 15px;
     text-align: left;
-    height: 290px;
+    height: 260px;
     overflow-y: scroll;
     word-wrap: break-word;
-    border: 1px solid #222222;
+    border: 2px solid #3d312a;
+    border-radius: 10px;
+    box-sizing: border-box;
 }
 
 #kernel-options {
     margin-bottom: 1rem;
+    color: #4ade80;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 input[type="radio"] {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 1rem;
-    height: 1rem;
-    border: 2px solid #555;
-    border-radius: 50%;
-    background-color: #fff;
+    width: 16px;
+    height: 16px;
+    accent-color: #4ade80;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.mt-2 {
+    margin-top: 1.5rem;
+}
+
+.autoJb {
+    margin-top: 10px;
+    color: #4ade80;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #4ade80;
     cursor: pointer;
 }
 
-input[type="radio"]:checked {
-    background-color: #00ff00;
+/* تۆڕێن جڤاکی (اینستگرام و تیک تۆک) */
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
 }
 
-.mt-2{
-    margin-top: 2rem;
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    color: #4ade80;
+    background: #14110f;
+    border: 2px body.dark-mode {
+    background: linear-gradient(rgba(10, 17, 32, 0.85), rgba(10, 17, 32, 0.85)), url('../includes/1000066162.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #4ade80;
+}
+
+body.light-mode {
+    background: linear-gradient(rgba(240, 244, 248, 0.9), rgba(240, 244, 248, 0.9)), url('../includes/1000066162.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #1e293b;
+}
+ #3d312a;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.social-btn:hover {
+    background: #1e293b;
+    border-color: #4ade80;
 }
