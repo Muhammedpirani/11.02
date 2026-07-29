@@ -136,7 +136,7 @@
         box-sizing: border-box;
     }
 
-    /* نامەیا سوپاسگوزارییا داویێ */
+    /* نامەیا سوپاسگوزاریێ */
     #thankyou-message {
         display: none;
         background: #21262d;
@@ -282,7 +282,7 @@
 
     <pre id="console">ئامادەیە. ل چاڤەڕێیا بجهئینانێ یە...</pre>
     
-    <!-- نامەیا سوپاسگوزاریێ یا کوشتی پاشی 5 چرکان دێ دەرکەفیت -->
+    <!-- نامەیا سوپاسگوزاریێ -->
     <div id="thankyou-message">
       <h2>✨ دەستخۆشی و سوپاس بۆ تە! ✨</h2>
       <p>سوپاس بۆ وى کەسێ هێژا یێ کو ڤى پەڕەی بەکاردئینیت و سەردانا مە کرى. هیڤیدارم کارێ تە ب سەرکەفتن ب دوماهى هاتبت و هەر هەی ب سەلامەت بی! 🙏❤️</p>
@@ -315,14 +315,13 @@
   <script src="src/main.js"></script>
   <script src="includes/script.js"></script>
   <script>
-    // پشتی ته‌واو بارکرنا هه‌می دیزاین، فۆنت، و فایلا (Fully Loaded)
     window.addEventListener('load', () => {
         const uaElement = document.getElementById('UA');
         if (uaElement) {
             uaElement.innerText = "ئامێر: " + navigator.userAgent;
         }
 
-        // دانانا تایمه‌ره‌كێ 5 چركه‌یی پشتی لۆدبوونا ته‌واو یێن فایلا
+        // دانانا تایمه‌ره‌كێ 5 چركه‌یی پشتی لۆدبوونا ته‌واو
         setTimeout(() => {
             const consoleBox = document.getElementById('console');
             const thankyouBox = document.getElementById('thankyou-message');
@@ -337,14 +336,9 @@
                 thankyouBox.scrollIntoView({ behavior: 'smooth' });
             }
 
-            // هەڤکێشا داخستنا پەڕەی (ئەگەر براوەر ڕێ بدەت)
-            try {
-                window.close();
-            } catch(e) {
-                console.log("Window close restricted.");
-            }
+            // بەشێ داخستنا پەڕەی (window.close) هاتە لادان دا پەڕە کراوە ب مێنیت.
             
-        }, 5000); // 5000 ده‌مژمێرا ملیکرک = 5 چركه‌
+        }, 5000); // 5 چڕکە
     });
 
     // کلیل بۆ گوهۆڕینا دیمەنی نێوان تاریک و ڕۆناهی
