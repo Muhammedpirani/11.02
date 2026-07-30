@@ -1,41 +1,29 @@
-# WebKit CSSFontFace Exploit for PS4/PS5
+📜 هۆزانا سپاسداریێ
+رێکا زانستێ و لێگەڕیانێ، رێکەکا دوور و دژوارە
 
-### Vulnerability Scope
+مێشکێ هووربین و زیرەک، ژ بۆ ڕاستیێ ل کارە
 
-|               | CSSFontFace |
-| :------------ | :---------- |
-| PlayStation 4 | 6.00-13.52  |
-| PlayStation 5 | 1.00-13.40  |
+ب شەڤ و ڕۆژ خەباتکرن، ب بێ وستان و هەلویست
 
-### Exploitable In
+زانستێ وە یێ ڕوون و ڕۆشن، دیاریەکە بۆ هەر هەڤدووست
 
-|               | CSSFontFace |
-| :------------ | :---------- |
-| PlayStation 4 | 6.00-11.02  |
-| PlayStation 5 | 1.00-8.60   |
+سلاڤ ل شەڤنخۆنی و ڕەنجا وە یا مەزن
 
-* PS5 is also exploitable if ASLR can be defeated, either through a heap-shaping trick or a separate leak bug, and the expected vtable pointer can be recovered before the native crash path.
+هوین رێبەرێن ئاشکراکرنا کۆد و سیستمن
 
-## Supported by This Repository
+📝 دەقێ سپاسنامەیێ
+سلاڤ و ڕێز ب گەرمی بۆ هەمی ڤەکۆلەر و تێکۆشەرێن جیهانا تەکنۆلۆژیایێ
 
-|               | CSSFontFace | Kernel Exploit |
-| :------------ | :---------- |:-------------- |
-| PlayStation 4 | 6.00-11.02  | 7.00-11.02     |
-| PlayStation 5 | N/A         | N/A            |
+ئەڤ دەقە دەستەواژەیەکا بچووک یا پێزانینێ یە بۆ هەمی ئەو مێشکێن جیاواز یێن کو تەمەن و دەمێ خۆ ددەنە ڤەکۆلینێن هوور و زانستی د سیستمان دا:
 
-* add your payload/hen of choice in public/src named as `payload.bin`
-  
-## Limitations
+بۆ Muhammed Pirani و برایێ وی Shosho Barwari: سپاسیا تایبەت بۆ کۆشش، کارێ بەردەوام و سەرپەرشتیکرنا چێکرنا ڤی پرۆژەی و گەشەپێدانا زنجیرا خەباتا زانستی.
 
-* Newer WebKit versions on PlayStation 4 [11.5x-latest] and PlayStation 5 [9.00-latest] redesigned CSSFontFace get/set property handling and introduced `m_propertiesOrCSSConnection`. Because of this and other layout changes, the `m_featureSettings` read/write primitive used by this repository is no longer usable on firmware versions above the ranges listed here.
-* On PlayStation 5, vtable checks and WebKit ASLR prevent this repository's chain from working unless a separate ASLR defeat and vtable recovery workaround is found.
+بۆ ufm42: سپاس و پێزانین بۆ شۆپاندن و لێگەڕیانا کێشەیان د سیستمی دا.
 
-Technical writeup: https://linearfox.com/blog/cssfontface-uaf-playstation
+بۆ Nathan Fargo (ntfargo): سپاس بۆ بنڤێسینا ڕۆن و دروستکرنا شیکارێن زانستی یێن ب مفاو پر زانیاری.
 
-# Collaborators / Research References
+بۆ Dr.Yenyen: دەستخۆشی بۆ تاقیکرن، ئارامگری و پشتڕاستکرنا هەمی ئۆپەراسیۆنان.
 
-[ufm42](https://github.com/ufm42): Bug Research, Full Chain Exploit Development.  
-[Nathan Fargo](https://github.com/ntfargo) aka @ntfargo: Bug Research, Writeup, Exploit Development.   
-[Dr.Yenyen](https://github.com/DrYenyen): Testing.  
-Hacking the PS4 by CTurt (2015) https://cturt.github.io/ps4.html    
-Old PS5 Webkit contributors. (2022) https://github.com/ChendoChap/PS5-Webkit-Execution
+بۆ ڕێبەر و نووسەرێن ژێدەران (CTurt و ChendoChap و تەواویا تێما بەردەست): سپاس بۆ ئاواکرنا تەواوی بنەغەیێ زانستێ ئازاد و بەلاڤکرنا ئەزموونا خۆ دگەل جیهانێ.
+
+ڕەنج، ماندووبوون و شەڤنخۆنیا وە هەمی دەمان جهێ شانازی و ڕێزگرتنا مەزنە. هیڤیدارین بەردەوام سەرکەفتی و پێشەنگ بن!
