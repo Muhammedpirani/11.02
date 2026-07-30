@@ -27,4 +27,5 @@
 بۆ ڕێبەر و نووسەرێن ژێدەران (CTurt و ChendoChap و تەواویا تێما بەردەست): سپاس بۆ ئاواکرنا تەواوی بنەغەیێ زانستێ ئازاد و بەلاڤکرنا ئەزموونا خۆ دگەل جیهانێ.
 
 ڕەنج، ماندووبوون و شەڤنخۆنیا وە هەمی دەمان جهێ شانازی و ڕێزگرتنا مەزنە. هیڤیدارین بەردەوام سەرکەفتی و پێشەنگ بن!
-instagram:https://www.instagram.com/muhammed.pirani/
+instagram: https://www.instagram.com/muhammed.pirani
+tiktok: https://www.tiktok.com/@muhammed_pirani?_r=1&_t=ZS-98L8zooT7Vn
