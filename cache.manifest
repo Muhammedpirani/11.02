@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 CACHE:
 index.html
+run_poops.html
 includes/cat.jpg
 includes/script.js
 includes/style.css
@@ -16,6 +17,11 @@ src/workers.js
 src/ps4/constants.js
 src/ps4/kernel.js
 src/ps4/userland.js
+src/ps4/poops/1102.bin
+src/ps4/poops/1150.bin
+src/ps4/poops/1200.bin
+src/ps4/poops/1250.bin
+src/ps4/poops/1300.bin
 src/ps4/patches/1000.bin
 src/ps4/patches/1050.bin
 src/ps4/patches/1100.bin
