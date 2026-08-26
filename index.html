@@ -3,35 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUHAMMED PİRANİ</title>
+  <title>MUHAMMED PİRANİ</title> sopas bo SHOSHO BARWARİ
   <style>
+    /* Systema Tarik (Dark Mode) o Bodya Sereki */
     body {
         background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
         background-attachment: fixed;
         color: #4ade80;
-        font-family: "Segoe UI", system-ui, Arial, sans-serif;
+        font-family: Arial, sans-serif;
         margin: 0;
         padding: 15px 25px;
         text-align: center;
         box-sizing: border-box;
-    }
-
-    #brand { 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px; 
-        background: #0e1116;
-        border-bottom: 1px solid #1e2732; 
-        border-radius: 8px;
-        margin-bottom: 15px;
-    }
-    #brand b { 
-        font-size: 15px; 
-        font-weight: 700; 
-        letter-spacing: .14em;
-        color: #e6ebf2; 
-        vertical-align: middle; 
     }
 
     h1 {
@@ -54,6 +37,7 @@
         box-sizing: border-box;
     }
 
+    /* Nvisina Taybet li ser Jailbreaka PS4 */
     .credits-box {
         background: #21262d;
         border: 2px solid #30363d;
@@ -137,30 +121,23 @@
         cursor: pointer;
     }
 
+    /* Layouta Sereki (Li Naverastê Ji Bo Console) */
     .main-layout {
         width: 95%;
         max-width: 900px;
         margin: 20px auto;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
     }
 
-    #state { 
-        font-size: 20px; 
-        font-weight: 700; 
-        margin-bottom: 10px; 
-        color: #e6ebf2; 
-    }
-
-    #console, #out {
+    #console {
         width: 100%;
         background: #0d1117;
         color: #4ade80;
-        font-family: Consolas, monospace;
-        font-size: 15px;
+        font-family: monospace;
+        font-size: 16px;
         padding: 18px;
         text-align: left;
         height: 280px;
@@ -170,10 +147,9 @@
         border-radius: 10px;
         box-sizing: border-box;
         margin: 0;
-        white-space: pre-wrap;
     }
 
-    /* Nameya Supasguzariye (Zێدەبوو داکو کێشە نەبێت) */
+    /* Nameya Supasguzariye */
     #thankyou-message {
         display: none;
         background: #21262d;
@@ -184,9 +160,27 @@
         width: 95%;
         max-width: 1200px;
         text-align: center;
+        animation: fadeIn 0.5s ease-in-out;
         box-sizing: border-box;
     }
 
+    #thankyou-message h2 {
+        color: #4ade80;
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    #thankyou-message p {
+        color: #e2e8f0;
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    /* ----------------------------------------------------
+       شاشا مەزن یا دەمێ پشتی ٦ چرکەیان دیار دبيت (Hero Box)
+    ---------------------------------------------------- */
     #big-popup {
         display: none;
         background: linear-gradient(145deg, #161b22, #0d1117);
@@ -198,6 +192,7 @@
         width: 95%;
         max-width: 900px;
         text-align: center;
+        animation: zoomIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         box-sizing: border-box;
     }
 
@@ -208,6 +203,7 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         margin: 0 0 10px 0;
+        text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
     }
 
     .popup-subtitle {
@@ -217,11 +213,16 @@
         font-weight: bold;
     }
 
+    .popup-image-container {
+        margin: 20px 0;
+    }
+
     .popup-image-container img {
         width: 150px;
         height: 150px;
         border-radius: 50%;
         border: 4px solid #4ade80;
+        box-shadow: 0 0 15px rgba(74, 222, 128, 0.3);
         object-fit: cover;
     }
 
@@ -230,6 +231,16 @@
         color: #e2e8f0;
         line-height: 1.6;
         margin: 15px 0 0 0;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
     }
 
     .social-container {
@@ -243,121 +254,224 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 60px;
-        height: 60px;
-        background: #161b22;
+        width: 65px;
+        height: 65px;
+        background: #21262d;
+        color: #4ade80;
         border: 2px solid #30363d;
         text-decoration: none;
-        border-radius: 50%;
-        color: #fff;
+        border-radius: 12px;
+        transition: 0.2s;
+    }
+
+    .social-btn svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-btn:hover {
+        transform: scale(1.08);
+        border-color: #4ade80;
+    }
+
+    /* Dogmeya Guhorina Dark Mode / Light Mode */
+    .theme-toggle-container {
+        margin: 12px 0;
     }
 
     .theme-btn {
         background: #21262d;
         color: #4ade80;
         border: 2px solid #30363d;
-        border-radius: 6px;
-        padding: 6px 12px;
-        font-size: 13px;
+        border-radius: 8px;
+        padding: 10px 20px;
+        font-size: 15px;
         cursor: pointer;
         font-weight: bold;
+        transition: 0.2s;
     }
 
+    .theme-btn:hover {
+        background: #30363d;
+        border-color: #4ade80;
+    }
+
+    /* Dimene Light Mode */
     body.light-mode {
         background: linear-gradient(135deg, #f0f2f5 0%, #e4e6eb 100%);
         color: #1f2937;
+    }
+
+    body.light-mode .device-info-box,
+    body.light-mode .credits-box,
+    body.light-mode button#jeilbrek,
+    body.light-mode .social-btn,
+    body.light-mode .theme-btn,
+    body.light-mode #thankyou-message {
+        background: #ffffff;
+        border-color: #d1d5db;
+        color: #1f2937;
+    }
+
+    body.light-mode #big-popup {
+        background: #ffffff;
+        border-color: #2563eb;
+        box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+    }
+
+    body.light-mode .popup-title {
+        color: #2563eb;
+        text-shadow: none;
+    }
+
+    body.light-mode .popup-subtitle {
+        color: #1f2937;
+    }
+
+    body.light-mode .popup-desc {
+        color: #4b5563;
+    }
+
+    body.light-mode #thankyou-message p {
+        color: #4b5563;
+    }
+
+    body.light-mode #console {
+        background: #ffffff;
+        color: #1f2937;
+        border-color: #d1d5db;
+    }
+
+    body.light-mode h1,
+    body.light-mode .autoJb,
+    body.light-mode #kernel-options {
+        color: #1f2937;
+    }
+
+    @media screen and (max-width: 768px) {
+        .main-layout {
+            width: 100%;
+        }
+        #console {
+            width: 100%;
+        }
+        .popup-title {
+            font-size: 28px;
+        }
+        .popup-subtitle {
+            font-size: 18px;
+        }
     }
   </style>
 </head>
 <body class="dark-mode">
 
-  <div id="brand">
-    <b>sopas bo SHOSHO BARWARİ</b>
-    <button class="theme-btn" onclick="toggleTheme()">🌙 Mode</button>
-  </div>
-
   <h1>MUHAMMED PİRANİ</h1>
   <h3 id="UA" class="device-info-box">Amêr: Di baranînê daye...</h3>
+
+  <!-- Dogmeya Guhorina Rengê Perekê -->
+  <div class="theme-toggle-container">
+    <button class="theme-btn" onclick="toggleTheme()">🌙 / ☀️ Guhorina Dimani</button>
+  </div>
 
   <hr>
 
   <div class="btn-container">
     <form id="kernel-options">
-      <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl" checked>
-      <label for="netctrl-exploit">(6.00 - 11.00)</label>
-
-      <input type="radio" name="kernel" id="poops-exploit" value="poops">
-      <label for="poops-exploit">(11.02 - 13.00)</label>
+      <input type="radio" name="kernel" id="netctrl-exploit" value="netctrl">
+      <label for="netctrl-exploit">NetCtrl</label>
+      <input type="radio" name="kernel" id="lapse-exploit" value="lapse">
+      <label for="lapse-exploit">Lapse</label>
     </form>
-
     <button id="jeilbrek">Jailbreak Biki</button>
-
     <div class="autoJb">
-      <label for="autoJbInput" id="autoJbLabel">Haka ta bvet aw bxo karbkat ave click bka></label>
+      <label for="autoJbInput" id="autoJbLabel">Xokaranê Bê Destpêkrin</label>
       <input class="mt-2" id="autoJbInput" type="checkbox">
     </div>
   </div>
 
   <div class="main-layout">
-    <div id="state"></div>
+    <!-- Console -->
     <pre id="console">Amade ye. Li çaverêya bijeînana te...</pre>
-    <div id="out" style="display:none;"></div>
   </div>
-
-  <!-- نامەیا سوپاسگوزاری (زێدەبوو داکو کۆد نەشکێت) -->
-  <div id="thankyou-message">
-    <h2>پیرۆزبایی!</h2>
-    <p>پرۆسا جیلبڕێکێ ب سەرکەفتیانە ب دوماهی هات.</p>
-  </div>
-
+  <!-- شاشا مەزن یا پشتی ٦ چرکەیان دیار دبيت -->
   <div id="big-popup">
     <h1 class="popup-title">MUHAMMED PİRANİ</h1>
     <div class="popup-subtitle"> JAILBREAK SUCCESSFUL </div>
     <div class="popup-image-container">
+        <!-- وێنەیەکێ فۆتۆگرافی/گەیملۆگۆ (تۆ دشێی linkê وێنێ خۆ ل شوێنا src دانی) -->
         <img src="https://api.iconify.design/ri:gamepad-line.svg?color=%234ade80" alt="Muhammed Pirani Avatar">
     </div>
     <p class="popup-desc">
-      Xoşhalin ku prose bi serkeftiyan e bi dumahî hat!<br>
-      Bi xêr bêyî bo sîstemê taybet ê <strong>MUHAMMED PİRANİ</strong>.
-    </p>
+  Xoşhalin ku prose bi serkeftiyan e bi dumahî hat!
+Bi xêr bêyî bo sîstemê taybet ê
+<strong>MUHAMMED PİRANİ</strong> .
+    </p>shosho barwari
   </div>
 
+  <!-- Credits Box -->
   <div class="credits-box">
-    Ev sîstem hatiye drustkrn ji layê <strong>(MUHAMMED PİRANİ)</strong> ve, u bi harîkarya brayê xo <strong>(SHOSHO BARWARİ)</strong>. Ji bo Jailbreak krna PlayStation 4 (Version 6.00 hata 13.00).
+    Ev sîstem hatiye drustkrn ji layê <strong>(MUHAMMED PİRANİ)</strong> ve, u bi harîkarya brayê xo <strong>(SHOSHO BARWARİ)</strong>. Ji bo Jailbreak krna PlayStation 4 (Version 6.00 hata 11.02).
   </div>
 
+  <!-- Torên Civakî -->
   <div class="social-container">
-    <a href="https://www.instagram.com/muhammed.pirani/" target="_blank" class="social-btn" title="Instagram">IG</a>
-    <a href="https://www.tiktok.com/@muhammed_pirani" target="_blank" class="social-btn" title="TikTok">TT</a>
-    <a href="https://x.com/Muhammed_Pirani" target="_blank" class="social-btn" title="X">X</a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/muhammed.pirani/" target="_blank" class="social-btn instagram" title="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    
+    <!-- TikTok -->
+    <a href="https://www.tiktok.com/@muhammed_pirani?_r=1&_t=ZS-98L8zooT7Vn" target="_blank" class="social-btn tiktok" title="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.589 6.686a4.793 4.793 0 0 1-3.77-4.242V2h-3.445v13.672a2.896 2.896 0 0 1-5.201 1.743l-.002-.001.002.001a2.895 2.895 0 0 1 3.183-4.511v-3.5a6.329 6.329 0 0 0-5.394 10.692 6.33 6.33 0 0 0 10.857-4.424V8.687a8.182 8.182 0 0 0 4.773 1.526V6.79a4.853 4.853 0 0 1-1.01-.104z"/></svg>
+    </a>
+
+    <!-- X (Twitter) -->
+    <a href="https://x.com/Muhammed_Pirani" target="_blank" class="social-btn x-twitter" title="X (Twitter)">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
   </div>
 
   <script src="src/main.js"></script>
   <script src="includes/script.js"></script>
-  
-  <script type="module">
-    import "./chain_poops.js";
-  </script>
-
   <script>
     window.addEventListener('load', () => {
         const uaElement = document.getElementById('UA');
         if (uaElement) {
             uaElement.innerText = "Amêr: " + navigator.userAgent;
         }
+
+        // پشتی ٦ چرکەیان (6000 دەرپەڕینên ملیچرکەیی)
+        setTimeout(() => {
+            const consoleBox = document.getElementById('console');
+            const thankyouBox = document.getElementById('thankyou-message');
+            const bigPopup = document.getElementById('big-popup');
+
+            if(consoleBox) {
+                consoleBox.innerHTML += "\n[+] Kar xlas bu. Supas bo tishtkrnê!";
+            }
+            
+            if(thankyouBox) {
+                thankyouBox.style.display = "block";
+            }
+
+            // دیارکرنا کادرا مەزنا دیزاینکری
+            if(bigPopup) {
+                bigPopup.style.display = "block";
+                bigPopup.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+        }, 10000); // 10000ms = 10 چرکە
     });
 
     function toggleTheme() {
         const body = document.body;
-        const btn = document.querySelector('.theme-btn');
         if (body.classList.contains('dark-mode')) {
             body.classList.remove('dark-mode');
             body.classList.add('light-mode');
-            if(btn) btn.innerHTML = "tari";
         } else {
             body.classList.remove('light-mode');
             body.classList.add('dark-mode');
-            if(btn) btn.innerHTML = "ronahe";
         }
     }
   </script>
