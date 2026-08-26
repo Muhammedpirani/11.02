@@ -11,6 +11,7 @@ let autoJbValue = storedAutoJb !== null ? storedAutoJb === "true" : true;
 var exploitChain = localStorage.getItem("exploitChain") || "lapse";
 const netctrlRadio = document.getElementById("netctrl-exploit");
 const lapseRadio = document.getElementById("lapse-exploit");
+const poopsRadio = document.getElementById("poops-exploit"); // زێدەکرنا ڕادیۆیا poops
 const kexForm = document.getElementById('kernel-options');
 
 // Show user agent
@@ -91,9 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // choose prefered exploit chain
     if (exploitChain == "netctrl") {
-        netctrlRadio.checked = true;
+        if (netctrlRadio) netctrlRadio.checked = true;
+    } else if (exploitChain == "poops") {
+        if (poopsRadio) poopsRadio.checked = true; // نیشاندانا ھەلبژارتنا poops
     } else {
-        lapseRadio.checked = true;
+        if (lapseRadio) lapseRadio.checked = true;
     }
 
     // apply autojb localStorage value
