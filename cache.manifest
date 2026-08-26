@@ -12,6 +12,7 @@ src/loader.js
 src/main.js
 src/misc.js
 src/netctrl.js
+src/chain_poops.js
 src/worker.js
 src/workers.js
 src/ps4/constants.js
