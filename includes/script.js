@@ -11,92 +11,72 @@ let autoJbValue = storedAutoJb !== null ? storedAutoJb === "true" : true;
 var exploitChain = localStorage.getItem("exploitChain") || "lapse";
 const netctrlRadio = document.getElementById("netctrl-exploit");
 const lapseRadio = document.getElementById("lapse-exploit");
-const poopsRadio = document.getElementById("poops-exploit"); 
 const kexForm = document.getElementById('kernel-options');
 
-// Show user agent safely
-if (UAElement) {
-    UAElement.innerText += " " + navigator.userAgent;
-}
+// Show user agent
+UAElement.innerText += " " + navigator.userAgent;
 
-if (kexForm) {
-    kexForm.addEventListener("change", function (event) {
-        localStorage.setItem("exploitChain", event.target.value);
-        exploitChain = event.target.value;
-    });
-}
+kexForm.addEventListener("change", function (event) {
+    localStorage.setItem("exploitChain", event.target.value);
+    exploitChain = event.target.value;
+});
 
 // jailbreak execution
-if (jeilbrekBtn) {
-    jeilbrekBtn.addEventListener("click", function (e){
-        jeilbrekBtn.disabled = true;
-        stopInterval();
-        if (typeof doJb === "function") {
-            doJb();
-        } else {
-            console.error("doJb function is not defined!");
-        }
-    });
-}
+jeilbrekBtn.addEventListener("click", function (e){
+    jeilbrekBtn.disabled = true;
+    stopInterval();
+    doJb();
+});
 
-if (checkbox) {
-    checkbox.addEventListener('change', function () {
-        localStorage.setItem("autoJb", checkbox.checked);
-        if (checkbox.checked == true && jeilbrekBtn && jeilbrekBtn.disabled == false) {
-            jailbreakCountdown();
-            return;
-        }
-        stopInterval();
-    });
-}
+checkbox.addEventListener('change', function () {
+    localStorage.setItem("autoJb", checkbox.checked);
+    if (checkbox.checked == true && jeilbrekBtn.disabled == false) {
+        jailbreakCountdown();
+        return;
+    }
+
+    stopInterval();
+});
 
 function stopInterval(){
     if (timerId !== null) {
         clearInterval(timerId);
         timerId = null;
     }
-    if (label) {
-        label.textContent = "Auto Jailbreak";
-    }
+    label.textContent = "Auto Jailbreak";
 }
 
 function jailbreakCountdown() {   
     stopInterval();
 
     let countdown = 5;
-    if (label) label.textContent = `Auto Jailbreaking in: ${countdown}`;
-    
+    label.textContent = `Auto Jailbreaking in: ${countdown}`;
     timerId = setInterval(() => {
         countdown--;
-        if (label) label.textContent = `Auto Jailbreaking in: ${countdown}`;
+        label.textContent = `Auto Jailbreaking in: ${countdown}`;
 
         if (countdown < 0) {
-            if (jeilbrekBtn) jeilbrekBtn.disabled = true; 
+            jeilbrekBtn.disabled = true; 
             clearInterval(timerId);
             timerId = null;
-            if (label) label.textContent = 'Executing';
-            
-            if (typeof doJb === "function") {
-                doJb();
-            } else {
-                console.error("doJb function is not defined!");
-            }
+            label.textContent = 'Executing';
+            doJb();
         }
     }, 1000);
 }
 
 function cacheProgress(e) {
-    if (e.total > 0) {
-        var Percent = (Math.round(e.loaded / e.total * 100));
-        document.title = "Caching: " + Percent + "%";
-    }
+    var Percent = (Math.round(e.loaded / e.total * 100));
+    document.title = "Caching: " + Percent + "%";
 }
 
 function displayCacheProgress() {
     setTimeout(function () {
+        // show a tick
         document.title = "\u2713";
     }, 1000);
     setTimeout(function () {
+        // location.reload();
         document.title = "CSSFontFace exploit";
     }, 3000);
 }
@@ -111,17 +91,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // choose prefered exploit chain
     if (exploitChain == "netctrl") {
-        if (netctrlRadio) netctrlRadio.checked = true;
-    } else if (exploitChain == "poops") {
-        if (poopsRadio) poopsRadio.checked = true; 
+        netctrlRadio.checked = true;
     } else {
-        if (lapseRadio) lapseRadio.checked = true;
+        lapseRadio.checked = true;
     }
 
     // apply autojb localStorage value
-    if (checkbox) {
-        checkbox.checked = autoJbValue;
-    }
+    checkbox.checked = autoJbValue;
 
     if (autoJbValue) jailbreakCountdown();
 });
